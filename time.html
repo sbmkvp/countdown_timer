@@ -8,11 +8,9 @@
 		<style>
 			.local {
 				position: fixed;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				transform: -webkit-translate(-50%, -50%);
-				transform: -ms-translate(-50%, -50%);
+				top: 0%;
+				left: 0%;
+				transform: scale(0.5) translate(25%, -25%);
 				text-align: center;
 			}
 			body {
@@ -26,14 +24,14 @@
 			<div class="localclock"></div>
 			<div style="margin-top:10%;font-size:3em;font-family:monospace;color:#2d2d2d;">India</div>
 			<div class="mumbaiclock"></div>
-			<div style="margin-top:10%;margin-bottom:10%;font-size:3em;font-family:monospace;color:#2d2d2d;">Next Submission</div>
+			<div style="margin-top:10%;margin-bottom:6%;font-size:3em;font-family:monospace;color:#2d2d2d;">Next Submission</div>
 			<div class="submission"></div>
 		</div>
 		<script>
 			Date.prototype.addMinutes=function(minutes){this.setMinutes(this.getMinutes() + minutes);return this;};
 			$('.localclock').FlipClock({clockFace:'TwentyFourHourClock'});
 			$('.mumbaiclock').FlipClock(moment(moment().tz('Asia/Kolkata').format('YYYY-MM-DD[T]HH:mm:ss')).toDate(),{clockFace:'TwentyFourHourClock'});
-			$('.submission').FlipClock(new Date('2017-05-05 23:59:59'), { clockFace: 'DailyCounter', countdown: true, showSeconds: false });
+			$('.submission').FlipClock(new Date('2018-12-04 23:59:59'), { clockFace: 'DailyCounter', countdown: true, showSeconds: false });
 			setTimeout(function(){window.location.reload(1);},300000);
 		</script>
 	</body>

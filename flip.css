@@ -429,3 +429,7 @@
 
   100% {
     opacity: 0; } }
+
+#clock-wrapper{
+  transform: scale(0.5);
+}
